@@ -3,9 +3,7 @@ import '../css/login.css';
 
 function Login() {
   return (
-    <div>
-      {' '}
-      <div id="loginform" />
+    <div id="loginform">
       <div>
         <label>
           <i className="fa-solid fa-right-to-bracket"></i> Username{' '}
@@ -20,7 +18,7 @@ function Login() {
       </div>
       <div>
         <button>login</button>
-      </div>{' '}
+      </div>
     </div>
   );
 }
