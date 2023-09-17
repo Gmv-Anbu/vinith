@@ -2,6 +2,9 @@ import React from 'react';
 import '../css/signup.css';
 
 function Signup() {
+  const onsubmit = (name) => {
+    alert('bye' + name);
+  };
   return (
     <div id="signupForm">
       <div>
@@ -23,7 +26,7 @@ function Signup() {
         <input type="password" />
       </div>
       <div>
-        <button>
+        <button onClick={() => onsubmit('vinith')}>
           <i className="fa-solid fa-right-to-bracket"></i> Signup
         </button>
       </div>
