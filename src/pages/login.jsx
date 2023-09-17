@@ -3,7 +3,7 @@ import '../css/login.css';
 
 function Login() {
   const onsubmit = (name) => {
-    alert('hello'+name);
+    alert('hello' + name);
   };
   return (
     <div id="loginform">
@@ -22,7 +22,10 @@ function Login() {
       <div>
         {/* <button onClick={onsubmit}>login</button> */}
         {/* <button onClick={onsubmit()}>login</button> */}
-        <button onClick={()=>onsubmit('vinith')}>login</button>
+        <button onClick={() => onsubmit('vinith')}>
+          {' '}
+          <i className="fa-solid fa-right-to-bracket"></i> login
+        </button>
       </div>
     </div>
   );
