@@ -31,6 +31,11 @@ function Navbar() {
             <i className="fa-solid fa-id-card"></i> employee id
           </a>
         </li>
+        <li>
+          <a href="./errorpage">
+            <i className="fa-solid fa-id-card"></i> errorpage
+          </a>
+        </li>
       </ul>
     </nav>
   );

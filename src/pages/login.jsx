@@ -2,6 +2,9 @@ import React from 'react';
 import '../css/login.css';
 
 function Login() {
+  const onsubmit = (name) => {
+    alert('hello'+name);
+  };
   return (
     <div id="loginform">
       <div>
@@ -17,7 +20,9 @@ function Login() {
         <input type="password" className="input" />
       </div>
       <div>
-        <button>login</button>
+        {/* <button onClick={onsubmit}>login</button> */}
+        {/* <button onClick={onsubmit()}>login</button> */}
+        <button onClick={()=>onsubmit('vinith')}>login</button>
       </div>
     </div>
   );
