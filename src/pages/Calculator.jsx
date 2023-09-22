@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/calculator.css';
 
 function Calculator() {
-  const [result, setresult] = React.useState('2');
+  const [result, setresult] = React.useState('');
   const display = (key) => {
     setresult(result + key);
   };
