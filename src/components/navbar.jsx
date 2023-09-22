@@ -22,12 +22,12 @@ function Navbar() {
         </li>
         <li>
           <a href="/pagination">
-            <i className="fa-solid fa-calculator"></i> Pagination
+          <i class="fa-solid fa-table-cells"></i> Pagination
           </a>
         </li>
         <li>
           <a href="/dummy">
-            <i className="fa-solid fa-calculator"></i> Dummy
+          <i class="fa-solid fa-d"></i> Dummy
           </a>
         </li>
         {/* <li>
@@ -43,12 +43,12 @@ function Navbar() {
         </li> */}
         <li>
           <a href="/errorpage">
-            <i className="fa-solid fa-id-card"></i> errorpage
+          <i class="fa-solid fa-circle-exclamation"></i> errorpage
           </a>
         </li>
         <li>
           <a href="/employeelist">
-            <i className="fa-solid fa-id-card"></i> Employeelist
+          <i class="fa-regular fa-rectangle-list"></i> Employeelist
           </a>
         </li>
         <li>
