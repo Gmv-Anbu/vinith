@@ -11,5 +11,14 @@
 
 .calculator button {
   padding: 10px;
-  margin: 8px;
+  margin: 6px;
+  width: 40px;
+}
+
+.calculator button.double {
+  width: 91px;
+}
+.calculator input {
+  width: 180px;
+  padding: 10px;
 }

@@ -42,8 +42,12 @@ function Calculator() {
           <button>C</button>
         </div>
         <div>
-          <button onClick={() => setresult('')}>AC</button>
-          <button onClick={() => setresult(eval(result))}>=</button>
+          <button className="double" onClick={() => setresult('')}>
+            AC
+          </button>
+          <button className="double" onClick={() => setresult(eval(result))}>
+            =
+          </button>
         </div>
       </div>
     </div>
