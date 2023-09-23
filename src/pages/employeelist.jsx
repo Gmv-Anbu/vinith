@@ -1407,7 +1407,9 @@ function Employeelist() {
   return (
     <div>
       <div id="emplist">
-        <Card btntext="view"></Card>
+        {employeeArray.map((e) => {
+          return <Card btntext="view" emp={employeeArray[0]}></Card>;
+        })}
       </div>
     </div>
   );
