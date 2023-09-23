@@ -1404,11 +1404,14 @@ function Employeelist() {
       EmployeeID: 200,
     },
   ];
+  const view = (emp) => {
+    console.log(emp);
+  };
   return (
     <div>
       <div id="emplist">
         {employeeArray.map((emp) => {
-          return <Card btntext="view" emp={emp}></Card>;
+          return <Card btntext="view" emp={emp} click={() => view(emp)}></Card>;
         })}
       </div>
     </div>
