@@ -1,7 +1,9 @@
 import React from 'react';
 import Card from '../components/card';
+import { useNavigate } from 'react-router-dom';
 
 function Employeelist() {
+  const navigate = useNavigate();
   const employeeArray = [
     {
       Name: 'Aurora',
@@ -1406,6 +1408,8 @@ function Employeelist() {
   ];
   const view = (emp) => {
     console.log(emp);
+    localStorage.setItem('emp', JSON.stringify(emp));
+    navigate('/employeedetails');
   };
   return (
     <div>

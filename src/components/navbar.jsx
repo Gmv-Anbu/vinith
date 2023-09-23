@@ -1,34 +1,53 @@
 import React from 'react';
 import '../css/navbar.css';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav>
       <ul>
         <li>
-          <a href="/login">
+          {/* <a href="/login">
             <i className="fa-solid fa-user-secret"></i> login
-          </a>
+          </a> */}
+          <NavLink to="/login">
+            <i className="fa-solid fa-user-secret"></i> login
+          </NavLink>
         </li>
         <li>
-          <a href="/signupsolution">
+          {/* <a href="/signupsolution">
             <i className="fa-solid fa-right-to-bracket"></i> signup
-          </a>
+          </a> */}
+          <NavLink to="/signup">
+            {' '}
+            <i className="fa-solid fa-right-to-bracket"></i> signup
+          </NavLink>
         </li>
         <li>
-          <a href="/calculator">
+          {/* <a href="/calculator">
             <i className="fa-solid fa-calculator"></i> calculator
-          </a>
+          </a> */}
+          <NavLink to="/calculator">
+            <i className="fa-solid fa-calculator"></i> calculator
+          </NavLink>
         </li>
         <li>
-          <a href="/pagination">
-          <i class="fa-solid fa-table-cells"></i> Pagination
-          </a>
+          {/* <a href="/pagination">
+            <i class="fa-solid fa-table-cells"></i> Pagination
+          </a> */}
+          <NavLink to="/pagination">
+            {' '}
+            <i class="fa-solid fa-table-cells"></i> Pagination
+          </NavLink>
         </li>
         <li>
-          <a href="/dummy">
-          <i class="fa-solid fa-d"></i> Dummy
-          </a>
+          {/* <a href="/dummy">
+            <i class="fa-solid fa-d"></i> Dummy
+          </a> */}
+          <NavLink to="/dummy">
+            {' '}
+            <i class="fa-solid fa-d"></i> Dummy
+          </NavLink>
         </li>
         {/* <li>
           <a href="/tabel">
@@ -42,20 +61,28 @@ function Navbar() {
           </a>
         </li> */}
         <li>
-          <a href="/errorpage">
-          <i class="fa-solid fa-circle-exclamation"></i> errorpage
-          </a>
+          {/* <a href="/errorpage">
+            <i class="fa-solid fa-circle-exclamation"></i> errorpage
+          </a> */}
+          <NavLink to="/errorpage">
+            {' '}
+            <i class="fa-solid fa-circle-exclamation"></i> errorpage
+          </NavLink>
         </li>
         <li>
-          <a href="/employeelist">
-          <i class="fa-regular fa-rectangle-list"></i> Employeelist
-          </a>
+          {/* <a href="/employeelist">
+            <i class="fa-regular fa-rectangle-list"></i> Employeelist
+          </a> */}
+          <NavLink to="/employeelist">
+            {' '}
+            <i class="fa-regular fa-rectangle-list"></i> Employeelist
+          </NavLink>
         </li>
-        <li>
+        {/* <li>
           <a href="/employeedetails">
             <i className="fa-solid fa-id-card"></i> Employeedetails
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
