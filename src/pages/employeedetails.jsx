@@ -30,12 +30,52 @@ function Employeedetails() {
         <Card btntext="back" emp={emp} click={back}></Card>
       </div>
       <table id="table1">
-        <tr>
+      <tr>
           <th>Name</th>
           <td>{emp.Name}</td>
         </tr>
         <tr>
           <th>Age</th>
+          <td>{emp.Age}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>{emp.Email}</td>
+        </tr>
+        <tr>
+          <th>Date of joining</th>
+          <td>{emp.Date}</td>
+        </tr>
+        <tr>
+          <th>Phone number</th>
+          <td>{emp.Age}</td>
+        </tr>
+        <tr>
+          <th>Street</th>
+          <td>{emp.Street}</td>
+        </tr>
+        <tr>
+          <th>City</th>
+          <td>{emp.City}</td>
+        </tr>
+        <tr>
+          <th>Region</th>
+          <td>{emp.Region}</td>
+        </tr>
+        <tr>
+          <th>Zip</th>
+          <td>{emp.Zip}</td>
+        </tr>
+        <tr>
+          <th>Country</th>
+          <td>{emp.Age}</td>
+        </tr>
+        <tr>
+          <th>Info</th>
+          <td>{emp.Age}</td>
+        </tr>
+        <tr>
+          <th>EmployeeID</th>
           <td>{emp.Age}</td>
         </tr>
       </table>
