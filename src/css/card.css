@@ -1,0 +1,18 @@
+.card {
+  border: 1px solid #a383fa;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #64dd17;
+}
+/* body { */
+/* background-color: #ccff90; */
+/* } */
+.card img {
+  width: 180px;
+}
+/* button {
+  background-color: #ccff90;
+} */
