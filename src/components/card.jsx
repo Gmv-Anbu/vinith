@@ -9,7 +9,7 @@ function Card(props) {
       />
       <p>{props.emp.Name}</p>
       <p>{props.emp.EmployeeID}</p>
-      <button>{props.btntext}</button>
+      <button onClick={props.click}>{props.btntext}</button>
     </div>
   );
 }
