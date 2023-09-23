@@ -1407,8 +1407,8 @@ function Employeelist() {
   return (
     <div>
       <div id="emplist">
-        {employeeArray.map((e) => {
-          return <Card btntext="view" emp={employeeArray[0]}></Card>;
+        {employeeArray.map((emp) => {
+          return <Card btntext="view" emp={emp}></Card>;
         })}
       </div>
     </div>
