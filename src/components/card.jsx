@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/card.css';
-function Card() {
+function Card(props) {
   return (
     <div class="card">
       <img
@@ -9,7 +9,7 @@ function Card() {
       />
       <p>name</p>
       <p>id</p>
-      <button>view</button>
+      <button>{props.btntext}</button>
     </div>
   );
 }
