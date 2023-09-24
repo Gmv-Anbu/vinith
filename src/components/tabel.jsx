@@ -1,6 +1,7 @@
 import React from 'react';
 const Table = (props) => {
   console.log(props.data);
+  const [filterdata, setfilterdata] = React.useState([]);
   const generathead = (obj) => {
     const keys = Object.keys(obj);
     console.log(keys);
@@ -14,22 +15,32 @@ const Table = (props) => {
   const generatrow = (data) => {
     return data.map((e) => <tr>{generatdata(e)}</tr>);
   };
+  const displaypage = (page) => {
+    // let page = 1;
+    let start = (page - 1) * 10;
+    let end = start + 10;
+    let newdata = props.data.slice(start, end);
+    setfilterdata(newdata);
+  };
+  React.useEffect(() => {
+    displaypage(1);
+  }, []);
   return (
     <div>
       <div>
-        <button> &lt;&lt; </button>
-        <button> &lt; </button>
-        <button> 1 </button>
-        <button> 2 </button>
-        <button> 3 </button>
-        <button> 4 </button>
-        <button> 5 </button>
-        <button> &gt; </button>
-        <button> &gt;&gt; </button>
+        <button onClick={()=>displaypage(1)}> &lt;&lt; </button>
+        <button onClick={()=>displaypage()}> &lt; </button>
+        <button onClick={()=>displaypage(1)}> 1 </button>
+        <button onClick={()=>displaypage(2)}> 2 </button>
+        <button onClick={()=>displaypage(3)}> 3 </button>
+        <button onClick={()=>displaypage(4)}> 4 </button>
+        <button onClick={()=>displaypage(5)}> 5 </button>
+        <button onClick={()=>displaypage()}> &gt; </button>
+        <button onClick={()=>displaypage()}> &gt;&gt; </button>
       </div>
       <table>
         <tr>{generathead(props.data[0])}</tr>
-        {generatrow(props.data)}
+        {generatrow(filterdata)}
       </table>
     </div>
   );

@@ -5,7 +5,7 @@ function Pagination() {
   // const data = [];
   const [data, setdata] = React.useState([]);
   const getdata = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/comments')
       .then((response) => response.json())
       .then((responsedata) => {
         // data=responsedata;
@@ -13,7 +13,10 @@ function Pagination() {
         console.log(responsedata);
       });
   };
-  getdata();
+  React.useEffect(() => {
+    getdata();
+  }, []);
+  // getdata();
   return (
     <div> {data.length > 0 ? <Table data={data}> </Table> : 'loding...'} </div>
   );
