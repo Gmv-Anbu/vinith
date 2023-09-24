@@ -32,7 +32,7 @@ function Pagination() {
   return (
     <div>
       {' '}
-      <Table> </Table>{' '}
+      <Table data={data}> </Table>{' '}
     </div>
   );
 }

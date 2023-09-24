@@ -1,42 +1,31 @@
 import React from 'react';
 const Table = (props) => {
+  console.log(props.data);
+  const generathead = (obj) => {
+    const keys = Object.keys(obj);
+    console.log(keys);
+    return keys.map((e) => <th>{e}</th>);
+  };
+  const generatdata = (obj) => {
+    const keys = Object.keys(obj);
+    console.log(keys);
+    return keys.map((e) => <td>{obj[e]}</td>);
+  };
   return (
     <div>
       <table>
+        <tr>{generathead(props.data[0])}</tr>
         <tr>
-          <th>postid</th>
-          <th>id</th>
-          <th>name</th>
-          <th>email</th>
-          <th>body</th>
+          {generatdata(props.data[0])}
         </tr>
         <tr>
-          <td>1</td>
-          <td>1</td>
-          <td> vinith</td>
-          <td>vinith2299@gmail.com</td>
-          <td> urhhubghfwhfeneuihberubryvbruijh</td>
+        {generatdata(props.data[1])}
         </tr>
         <tr>
-          <td>2</td>
-          <td>2</td>
-          <td>vedyut</td>
-          <td>vedyut2299@gmail.com</td>
-          <td> jvbuhbrvrurbgrilgbrughbrkrbgurgukrbjk</td>
+        {generatdata(props.data[2])}
         </tr>
         <tr>
-          <td>3</td>
-          <td>3</td>
-          <td> meenakshy</td>
-          <td>meenu2215@gmail.com</td>
-          <td>fbgdnymgtnbghfwhfeneuihberubryvbruijh</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>4</td>
-          <td> hariesh</td>
-          <td>hari09@gmail.com</td>
-          <td> ntgnymum,yhnmjghfwhfeneuihberubryvbruijh</td>
+        {generatdata(props.data[3])}
         </tr>
         <tr>
           <td>5</td>
