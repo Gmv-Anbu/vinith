@@ -29,6 +29,15 @@ function Pagination() {
       body: 'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit',
     },
   ];
+  const getdata = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((responsedata) => {
+        // data=responsedata;
+        console.log(responsedata);
+      });
+  };
+  getdata();
   return (
     <div>
       {' '}
