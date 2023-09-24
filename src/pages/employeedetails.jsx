@@ -68,15 +68,15 @@ function Employeedetails() {
         </tr>
         <tr>
           <th>Country</th>
-          <td>{emp.Age}</td>
+          <td>{emp.Country}</td>
         </tr>
         <tr>
           <th>Info</th>
-          <td>{emp.Age}</td>
+          <td>{emp.Info}</td>
         </tr>
         <tr>
           <th>EmployeeID</th>
-          <td>{emp.Age}</td>
+          <td>{emp.EmployeeID}</td>
         </tr>
       </table>
     </div>
