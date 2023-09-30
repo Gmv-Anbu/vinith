@@ -31,3 +31,9 @@ input {
   width: 100%;
   margin-bottom: 10px;
 }
+
+
+form small {display:block;
+width:100%;
+color: red;
+}

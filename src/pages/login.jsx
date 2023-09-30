@@ -37,7 +37,7 @@ function Login() {
             },
           })}
         />
-        <small>{erros.username && errors.username.message}</small>
+        <small>{errors.username && errors.username.message}</small>
       </div>
       <div>
         <label>
