@@ -30,14 +30,20 @@ const Table = (props) => {
     setfilterdata(newdata);
   };
   const generatebuttons = () => {
-    let start = 1;
-    let end = lastpage;
+    let start = page - 2 > 1 ? page - 2 : 1;
+    let end = page + 2 < lastpage ? page + 2 : lastpage;
     let buttons = [];
     for (let i = start; i <= end; i++) {
       buttons.push(i);
     }
     return buttons.map((eachbutton) => (
-      <button className={page === eachbutton ? 'activepage': ''} onClick={() => displaypage(eachbutton)}> {eachbutton} </button>
+      <button
+        className={page === eachbutton ? 'activepage' : ''}
+        onClick={() => displaypage(eachbutton)}
+      >
+        {' '}
+        {eachbutton}{' '}
+      </button>
     ));
   };
   React.useEffect(() => {
