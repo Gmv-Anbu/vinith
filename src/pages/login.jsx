@@ -19,13 +19,30 @@ function Login() {
         <label>
           <i className="fa-solid fa-right-to-bracket"></i> Username{' '}
         </label>
-        <input type="text" className="input" {...register('username')} />
+        <input
+          type="text"
+          className="input"
+          {...register('username', {
+            required: {
+              value: true,
+              message: 'usernameis required',
+            },
+            minLength: {
+              value: 3,
+              message: 'username atleast have 3 character',
+            },
+            maxLength: {
+              value: 10,
+              message: 'username not execd 10 characters ',
+            },
+          })}
+        />
       </div>
       <div>
         <label>
           <i className="fa-solid fa-unlock"></i> Password{' '}
         </label>
-        <input type="password" className="input" />
+        <input type="password" className="input" {...register('password')} />
       </div>
       <div>
         {/* <button onClick={onsubmit}>login</button> */}
