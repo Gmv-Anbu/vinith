@@ -1,17 +1,25 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { Form } from 'react-router-dom';
 import '../css/login.css';
 
 function Login() {
-  const onsubmit = (name) => {
-    alert('hello' + name);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onsubmit = (data) => {
+    // alert('hello' + name);
+    console.log(data);
   };
   return (
-    <div id="loginform">
+    <form id="loginform" onSubmit={handleSubmit(onsubmit)}>
       <div>
         <label>
           <i className="fa-solid fa-right-to-bracket"></i> Username{' '}
         </label>
-        <input type="text" className="input" />
+        <input type="text" className="input" {...register('username')} />
       </div>
       <div>
         <label>
@@ -22,12 +30,12 @@ function Login() {
       <div>
         {/* <button onClick={onsubmit}>login</button> */}
         {/* <button onClick={onsubmit()}>login</button> */}
-        <button onClick={() => onsubmit('vinith')}>
+        <button>
           {' '}
           <i className="fa-solid fa-right-to-bracket"></i> login
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
