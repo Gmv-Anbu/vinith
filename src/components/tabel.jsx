@@ -52,11 +52,12 @@ const Table = (props) => {
           {' '}
           &lt;{' '}
         </button>
-        <button onClick={() => displaypage(1)}> 1 </button>
+        {/* <button onClick={() => displaypage(1)}> 1 </button>
         <button onClick={() => displaypage(2)}> 2 </button>
         <button onClick={() => displaypage(3)}> 3 </button>
         <button onClick={() => displaypage(4)}> 4 </button>
-        <button onClick={() => displaypage(5)}> 5 </button>
+        <button onClick={() => displaypage(5)}> 5 </button> */}
+        {generatebuttons()}
         <button
           onClick={() => displaypage(page + 1)}
           disabled={page === lastpage}
