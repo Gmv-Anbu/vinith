@@ -37,7 +37,7 @@ const Table = (props) => {
       buttons.push(i);
     }
     return buttons.map((eachbutton) => (
-      <button onClick={() => displaypage(eachbutton)}> {eachbutton} </button>
+      <button className={page === eachbutton ? 'activepage': ''} onClick={() => displaypage(eachbutton)}> {eachbutton} </button>
     ));
   };
   React.useEffect(() => {
