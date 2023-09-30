@@ -43,7 +43,25 @@ function Login() {
         <label>
           <i className="fa-solid fa-unlock"></i> Password{' '}
         </label>
-        <input type="password" className="input" {...register('password')} />
+        <input
+          type="password"
+          className="input"
+          {...register('password', {
+            required: {
+              value: true,
+              message: 'password is required',
+            },
+            minLength: {
+              value: 3,
+              message: 'password atleast have 6 character with alphanumeric',
+            },
+            maxLength: {
+              value: 10,
+              message: 'password not execd 10 characters ',
+            },
+          })}
+        />
+        <small>{errors.password && errors.password.message}</small>
       </div>
       <div>
         {/* <button onClick={onsubmit}>login</button> */}
