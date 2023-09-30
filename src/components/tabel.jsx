@@ -1,7 +1,13 @@
 import React from 'react';
 const Table = (props) => {
   console.log(props.data);
+
   const [filterdata, setfilterdata] = React.useState([]);
+
+  const[page,setpage] = React.useState(1);
+  const[lastpage,Setpagelimit] = React.useState(1);
+  const[pagelimit,setpagelimit] = React.useState(10);
+
   const generathead = (obj) => {
     const keys = Object.keys(obj);
     console.log(keys);
@@ -17,8 +23,8 @@ const Table = (props) => {
   };
   const displaypage = (page) => {
     // let page = 1;
-    let start = (page - 1) * 10;
-    let end = start + 10;
+    let start = (page - 1) * pagelimit;
+    let end = start + pagelimit;
     let newdata = props.data.slice(start, end);
     setfilterdata(newdata);
   };
