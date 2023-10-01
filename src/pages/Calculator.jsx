@@ -14,7 +14,7 @@ function Calculator() {
   // };
   const clearfn = () => {
     let splitarray = result.split('');
-    if (splitarray.length > 1) {
+    if (splitarray.length > 0) {
       splitarray.pop();
       setresult(splitarray.join(''));
     }
@@ -46,7 +46,7 @@ function Calculator() {
           <button onClick={() => display('0')}>0</button>
           <button onClick={() => display('/')}>/</button>
           <button onClick={() => display('.')}>.</button>
-          <button onclick={() => clearfn()}>C</button>
+          <button onC lick={() => clearfn()}>C</button>
         </div>
         <div>
           <button className="double" onClick={() => setresult('')}>
