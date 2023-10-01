@@ -12,6 +12,13 @@ function Login() {
   const onsubmit = (data) => {
     // alert('hello' + name);
     console.log(data);
+    fetch('https://jsonplaceholder.typicode.com/comments')
+      .then((response) => response.json())
+      .then((responsedata) => {
+        // data=responsedata;
+        setdata(responsedata);
+        console.log(responsedata);
+      });
   };
   return (
     <form id="loginform" onSubmit={handleSubmit(onsubmit)}>
