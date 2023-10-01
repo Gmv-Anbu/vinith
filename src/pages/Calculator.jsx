@@ -12,6 +12,13 @@ function Calculator() {
   // const allclear = () => {
   //   setresult('');
   // };
+  const clearfn = () => {
+    let splitarray = result.split('');
+    if (splitarray.length > 1) {
+      splitarray.pop();
+      setresult(splitarray.join(''));
+    }
+  };
   return (
     <div>
       {' '}
@@ -39,7 +46,7 @@ function Calculator() {
           <button onClick={() => display('0')}>0</button>
           <button onClick={() => display('/')}>/</button>
           <button onClick={() => display('.')}>.</button>
-          <button>C</button>
+          <button onclick={() => clearfn()}>C</button>
         </div>
         <div>
           <button className="double" onClick={() => setresult('')}>
