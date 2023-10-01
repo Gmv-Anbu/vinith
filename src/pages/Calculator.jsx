@@ -46,7 +46,7 @@ function Calculator() {
           <button onClick={() => display('0')}>0</button>
           <button onClick={() => display('/')}>/</button>
           <button onClick={() => display('.')}>.</button>
-          <button onC lick={() => clearfn()}>C</button>
+          <button onClick={() => clearfn()}>C</button>
         </div>
         <div>
           <button className="double" onClick={() => setresult('')}>

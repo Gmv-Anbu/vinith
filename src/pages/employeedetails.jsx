@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/card';
 import { useNavigate } from 'react-router-dom';
+import '../css/empdetail.css';
 function Employeedetails() {
   const navigate = useNavigate();
   var emp = {
@@ -29,8 +30,8 @@ function Employeedetails() {
       <div id="empdetail">
         <Card btntext="back" emp={emp} click={back}></Card>
       </div>
-      <table id="table1">
-      <tr>
+      <table id="table1" className="empTable">
+        <tr>
           <th>Name</th>
           <td>{emp.Name}</td>
         </tr>

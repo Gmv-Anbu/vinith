@@ -1,0 +1,9 @@
+div #empdetail {
+  position: absolute;
+  top: 100px;
+}
+div .empTable {
+  display: inline-block;
+  position: absolute;
+  left: 300px;
+}

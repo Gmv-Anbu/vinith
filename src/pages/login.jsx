@@ -51,14 +51,19 @@ function Login() {
               value: true,
               message: 'password is required',
             },
-            minLength: {
-              value: 3,
-              message: 'password atleast have 6 character with alphanumeric',
+            pattern: {
+              value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+              message:
+                'Minimum eight characters, at least one letter and one number',
             },
-            maxLength: {
-              value: 10,
-              message: 'password not execd 10 characters ',
-            },
+            // minLength: {
+            //   value: 3,
+            //   message: 'password atleast have 6 character with alphanumeric',
+            // },
+            // maxLength: {
+            //   value: 10,
+            //   message: 'password not execd 10 characters ',
+            // },
           })}
         />
         <small>{errors.password && errors.password.message}</small>
